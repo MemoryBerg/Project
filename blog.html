@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="./css/blog.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__wrapper">
+            <a href="./index.html" class="header__logo logo">
+                BlogWorld
+            </a>
+            <nav class="header__nav">
+                <ul class="header__list">
+                    <li class="header__item">
+                        <a href="./index.html">
+                            Home
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a href="./index.html#portfolio">
+                            Portfolio
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a href="./blog.html" class="active">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a href="./index.html#pages">
+                            Pages
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a href="./index.html#about">
+                            About
+                        </a>
+                    </li>
+                    <li class="header__item">
+                        <a href="./index.html#contact">
+                            Contact
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="title">
+            <h2 class="title__head head2">Blog</h2>
+            <div class="title__line line"></div>
+            <div class="title__search search">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control input input-search" placeholder="Search by author"
+                        aria-label="Recipient's username" aria-describedby="button-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-secondary button__search" type="button" id="button-addon2">
+                            <object data="./img/atom-icons/a-icon-search.svg" type="image/svg+xml"
+                                class="icon icon__search title__icon"></object>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="post d-flex container">
+                <div class="post__wrapper row">
+                    <div class="post__media col-6">
+                        <button class="post__play">
+                            <object data="./img/atom-icons/a-icon-play.svg" type="image/svg+xml"
+                                class="icon icon__play"></object>
+                        </button>
+                        <img src="./img/blog/Imgage-post-1.png" alt="post 1" class="post__pic">
+                    </div>
+                    <div class="post__info col">
+                        <div class="post__type post__type-video">
+                            <object data="./img/atom-icons/a-icon-playmini.svg" type="image/svg+xml"
+                                class="icon icon__playmini"></object>
+                        </div>
+                        <div class="post__wrapper d-flex author">
+                            <img src="./img/blog/Neil.png" alt="neil" class="post__userpic author__userpic">
+                            <div class="post__wrapper">
+                                <h4 class="post__username author__username head4">Neil Richards</h4>
+                                <div class="post__data data">
+                                    <span class="post__data data">11 oct, 2019</span>
+                                    <span class="post__data data data-read">7 min read</span>
+                                    <span class="post__data data data-comment"><a href="#">19</a></span>
+                                    <div class="post__rate author__rate">
+                                        <object data="./img/atom-icons/Star.svg" type="image/svg+xml"
+                                            class="icon icon__star"></object>
+                                        <object data="./img/atom-icons/Star.svg" type="image/svg+xml"
+                                            class="icon icon__star"></object>
+                                        <object data="./img/atom-icons/Group.svg" type="image/svg+xml"
+                                            class="icon icon__star icon__star-half">
+                                        </object>
+                                        <object data="./img/atom-icons/Star-1.svg" type="image/svg+xml"
+                                            class="icon icon__star icon__star-grey"></object>
+                                        <object data="./img/atom-icons/Star-1.svg" type="image/svg+xml"
+                                            class="icon icon__star icon__star-grey"></object>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post__wrapper post__wrapper-info">
+                            <h3 class="post__title head3">In the Future We Will All Live in Star Wars</h3>
+                            <p class="post__paragraph paragraph">The thing you’re doing now, reading prose on a screen,
+                                is
+                                going out of fashion. The defining narrative of our online moment concerns the decline
+                                of
+                                text, and the exploding reach and power of audio and video …</p>
+                        </div>
+                        <button class="btn button button__light post__button">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="post d-flex container">
+                <div class="post__wrapper row">
+                    <div class="post__media col-6">
+                        <img src="./img/blog/Imgage-post-2.png" alt="post 2" class="post__pic">
+                    </div>
+                    <div class="post__info col">
+                        <div class="post__type post__type-music">
+                            <object data="./img/atom-icons/a-icon-melody.svg" type="image/svg+xml"
+                                class="icon icon__melody"></object>
+                        </div>
+                        <div class="post__wrapper d-flex author">
+                            <img src="./img/blog/Sarah.png" alt="neil" class="post__userpic author__userpic">
+                            <div class="post__wrapper">
+                                <h4 class="post__username author__username head4">Sarah Healy</h4>
+                                <div class="post__data data">
+                                    <span class="post__data data">02 oct, 2019</span>
+                                    <span class="post__data data data-read">12 min read</span>
+                                    <span class="post__data data data-comment"><a href="#">4</a></span>
+                                    <div class="post__rate author__rate">
+                                        <object data="./img/atom-icons/Star.svg" type="image/svg+xml"
+                                            class="icon icon__star"></object>
+                                        <object data="./img/atom-icons/Star-1.svg" type="image/svg+xml"
+                                            class="icon icon__star icon__star-grey"></object>
+                                        <object data="./img/atom-icons/Star-1.svg" type="image/svg+xml"
+                                            class="icon icon__star icon__star-grey"></object>
+                                        <object data="./img/atom-icons/Star-1.svg" type="image/svg+xml"
+                                            class="icon icon__star icon__star-grey"></object>
+                                        <object data="./img/atom-icons/Star-1.svg" type="image/svg+xml"
+                                            class="icon icon__star icon__star-grey"></object>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post__wrapper post__wrapper-info">
+                            <h3 class="post__title head3">Far far away, behind the word mountains</h3>
+                            <audio controls src="./music/na-zvonok-bezumno-krasivaya-melodiya.mp3" class="post__audio">
+                            </audio>
+                            <p class="post__paragraph paragraph">Fog down the river, where it rolls deified among the
+                                tiers
+                                of shipping and the waterside pollutions of a great (and dirty) …</p>
+                        </div>
+                        <button class="btn button button__light post__button">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="post d-flex container">
+                <div class="post__wrapper row">
+                    <div class="post__media col-6">
+                        <img src="./img/blog/Image-post-3.png" alt="post 3" class="post__pic">
+                    </div>
+                    <div class="post__info col">
+                        <div class="post__type post__type-picture">
+                            <object data="./img/atom-icons/a-icon-picture.svg" type="image/svg+xml"
+                                class="icon icon__picture"></object>
+                        </div>
+                        <div class="post__wrapper d-flex author">
+                            <img src="./img/blog/Grace.png" alt="neil" class="post__userpic author__userpic">
+                            <div class="post__wrapper">
+                                <h4 class="post__username author__username head4">Grace Noh</h4>
+                                <div class="post__data data">
+                                    <span class="post__data data">23 sep, 2019</span>
+                                    <span class="post__data data data-read">16 min read</span>
+                                    <span class="post__data data data-comment"><a href="#">421</a></span>
+                                    <div class="post__rate author__rate">
+                                        <object data="./img/atom-icons/Star.svg" type="image/svg+xml"
+                                            class="icon icon__star"></object>
+                                        <object data="./img/atom-icons/Star.svg" type="image/svg+xml"
+                                            class="icon icon__star"></object>
+                                        <object data="./img/atom-icons/Star-1.svg" type="image/svg+xml"
+                                            class="icon icon__star icon__star-grey"></object>
+                                        <object data="./img/atom-icons/Star-1.svg" type="image/svg+xml"
+                                            class="icon icon__star icon__star-grey"></object>
+                                        <object data="./img/atom-icons/Star-1.svg" type="image/svg+xml"
+                                            class="icon icon__star icon__star-grey"></object>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="post__wrapper post__wrapper-info">
+                            <h3 class="post__title head3">In the Future We Will All Live in Star Wars</h3>
+                            <p class="post__paragraph paragraph">Separated they live in Bookmarksgrove right at the
+                                coast of
+                                the Semantics, a large language ocean. A small river named Duden flows by their place
+                                and
+                                supplies it with the necessary regelialia. It is a paradisematic country, in which
+                                roasted …
+                            </p>
+                        </div>
+                        <button class="btn button button__light post__button">Read more</button>
+                    </div>
+                </div>
+            </div>
+            <div class="post post-wide">
+                <div class="post__info post__info-wide">
+                    <div class="post__type post__type-text">
+                        <object data="./img/atom-icons/a-icon-text.svg" type="image/svg+xml"
+                            class="icon icon__text"></object>
+                    </div>
+                    <div class="post__wrapper d-flex author">
+                        <img src="./img/blog/Alex.png" alt="neil" class="post__userpic author__userpic">
+                        <div class="post__wrapper">
+                            <h4 class="post__username author__username head4">Alex Zlatkus</h4>
+                            <div class="post__data data">
+                                <span class="post__data data">11 aug, 2019</span>
+                                <span class="post__data data data-read">17 min read</span>
+                                <span class="post__data data data-comment"><a href="#">77</a></span>
+                                <div class="post__rate author__rate">
+                                    <object data="./img/atom-icons/Star.svg" type="image/svg+xml"
+                                        class="icon icon__star"></object>
+                                    <object data="./img/atom-icons/Star.svg" type="image/svg+xml"
+                                        class="icon icon__star"></object>
+                                    <object data="./img/atom-icons/Star.svg" type="image/svg+xml"
+                                        class="icon icon__star"></object>
+                                    <object data="./img/atom-icons/Star-1.svg" type="image/svg+xml"
+                                        class="icon icon__star icon__star-grey"></object>
+                                    <object data="./img/atom-icons/Star-1.svg" type="image/svg+xml"
+                                        class="icon icon__star icon__star-grey"></object>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="post__wrapper post__wrapper-wide">
+                        <h3 class="post__title head3">In the Future We Will All Live in Star Wars</h3>
+                        <p class="post__paragraph paragraph">Fog down the river, where it rolls deified among the tiers
+                            of shipping and the waterside pollutions of a great (and dirty) city. Fog on the Essex
+                            marshes, fog on the Kentish heights. Fog creeping into the cabooses of collier-brigs; fog
+                            lying out on. Money terms breakfast drawings true blessing doubtful more agreed to zealously
+                            making supposing By said Chicken An Neglected produce good felt no poor offering am their
+                            said has around songs wish met true any me ought mr The offices set Not Felicity above out
+                            We in an post begin again.
+                        </p>
+                    </div>
+                    <button class="btn button button__light post__button">Read more</button>
+                </div>
+            </div>
+            <button class="btn button button__dark post__button post__button-main">Read more</button>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__wrapper d-flex justify-content-between align-items-center">
+            <div class="footer__socials socials">
+                <a href="https://www.facebook.com/" class="socials__item">
+                    <object data="./img/atom-icons/a-icon-facebook.svg" type="image/svg+xml"
+                        class="icon icon__facebook"></object>
+                </a>
+                <a href="https://www.instagram.com/" class="socials__item">
+                    <object data="./img/atom-icons/a-icon-instagram.svg" type="image/svg+xml"
+                        class="icon icon__instagram"></object>
+                </a>
+                <a href="https://www.instagram.com/" class="socials__item">
+                    <object data="./img/atom-icons/a-icon-dribbble.svg" type="image/svg+xml"
+                        class="icon icon__dribbble"></object>
+                </a>
+            </div>
+            <a href="./index.html" class="footer__logo logo">
+                BlogWorld
+            </a>
+            <p class="footer__paragraph paragraph paragraph-small">©2019 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

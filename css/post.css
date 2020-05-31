@@ -1457,7 +1457,13 @@ textarea.form-control {
   margin: 42px auto 40px !important;
 }
 .button__search {
-  border-left: none;
+  border: none;
+  z-index: 10;
+}
+.button__search:hover, .button__search:active {
+  background-color: #FFFFFF !important;
+  border: none;
+  box-shadow: none;
 }
 
 .icon-grey {
@@ -1487,11 +1493,6 @@ textarea.form-control {
   margin-left: -8px;
 }
 
-.form__input:focus {
-  border: 1px solid #4D4949;
-  box-shadow: none;
-}
-
 .input {
   position: relative;
   width: 320px;
@@ -1499,8 +1500,7 @@ textarea.form-control {
 .input__error {
   border: 1px solid #F06786;
 }
-.input__pass:before {
-  content: "";
+.input__icon {
   min-width: 10px;
   display: block;
   position: absolute;
@@ -1509,26 +1509,27 @@ textarea.form-control {
   font-size: 14px;
   line-height: 23px;
   padding-left: 20px;
-}
-.input__pass-hide::before {
-  content: "Hide";
   left: 265px;
+  background: url("../img/atom-icons/a-icon-showpass.svg") no-repeat left;
+  cursor: pointer;
+}
+.input__icon.show {
+  left: 267px;
   background: url("../img/atom-icons/a-icon-hidepass.svg") no-repeat left;
 }
-.input__pass-show::before {
-  content: "show";
-  left: 267px;
-  background: url("../img/atom-icons/a-icon-showpass.svg") no-repeat left;
-}
 .input-search {
-  border: 1px solid #4D4C49;
-  border-right: none;
+  border: none;
   height: 45px;
-  padding-left: 10px;
+  padding-left: 8px;
+  padding-top: 4px;
   letter-spacing: -0.5px;
 }
 .input-search::placeholder {
   color: #4D4C49;
+}
+.input:focus {
+  border: none;
+  box-shadow: none;
 }
 
 .line {
@@ -1572,12 +1573,22 @@ textarea.form-control {
   width: 107px;
 }
 
+.form__input:focus {
+  border: 1px solid #4D4949;
+  box-shadow: none;
+}
+
 .search {
   width: 320px;
 }
 
 .btn-toolbar {
   justify-content: flex-end;
+}
+
+.no-radius {
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
 }
 
 .container {
@@ -3739,6 +3750,7 @@ main {
 .active {
   font-weight: 600;
   text-decoration: underline;
+  align-self: center;
 }
 
 .top {
@@ -3771,6 +3783,39 @@ strong {
 
 s {
   text-decoration: line-through;
+}
+
+div[data-result] {
+  position: absolute;
+  z-index: 2;
+  background-color: #FFFFFF;
+  width: 320px;
+  padding: 17px 15px 10px;
+  border: 1px solid;
+  border-top: transparent;
+  top: 45px;
+  left: -1px;
+}
+
+.input-group {
+  border: 1px solid #4D4C49;
+  border-radius: 5px;
+}
+
+.search-pic {
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+.search-pic:hover {
+  background-color: #F8F8F8;
+  cursor: pointer;
+}
+
+.pic {
+  width: 37px;
+  height: 37px;
+  margin-right: 10px;
 }
 
 .header {
@@ -3827,7 +3872,7 @@ s {
 }
 .reviews__connect {
   height: 820px;
-  border-left: 1px solid #DDDDDD;
+  border-left: 1.5px solid #DDDDDD;
   position: absolute;
   top: 107px;
   left: 40px;
@@ -3839,9 +3884,9 @@ s {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 1px solid #DDDDDD;
+  border: 1.5px solid #DDDDDD;
   position: absolute;
-  left: -8px;
+  left: -9px;
 }
 .reviews__connect::before {
   top: -16px;

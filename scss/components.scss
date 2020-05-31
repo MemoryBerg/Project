@@ -137,6 +137,7 @@ main {
 .active {
     font-weight: 600;
     text-decoration: underline;
+    align-self: center;
 }
 
 .top {
@@ -169,4 +170,38 @@ strong {
 
 s {
     text-decoration: line-through;
+}
+
+div[data-result] {
+    position: absolute;
+    z-index: 2;
+    background-color: #FFFFFF;
+    width: 320px;
+    padding: 17px 15px 10px;
+    border: 1px solid;
+    border-top: transparent;
+    top: 45px;
+    left: -1px;
+}
+
+.input-group {
+    border: 1px solid $main-dark-color;
+    border-radius: 5px;
+}
+
+.search-pic {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+
+    &:hover {
+    background-color: #F8F8F8;
+    cursor: pointer;
+    }
+}
+
+.pic {
+    width: 37px;
+    height: 37px;
+    margin-right: 10px;
 }

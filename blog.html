@@ -51,17 +51,16 @@
         </div>
     </header>
     <main>
-        <section class="title">
+        <section class="title" id="main">
             <h2 class="title__head head2">Blog</h2>
             <div class="title__line line"></div>
             <div class="title__search search">
-                <div class="input-group mb-3">
+                <div class="input-group mb-3" id="search">
                     <input type="text" class="form-control input input-search" placeholder="Search by author"
                         aria-label="Recipient's username" aria-describedby="button-addon2">
                     <div class="input-group-append">
-                        <button class="btn btn-outline-secondary button__search" type="button" id="button-addon2">
-                            <object data="./img/atom-icons/a-icon-search.svg" type="image/svg+xml"
-                                class="icon icon__search title__icon"></object>
+                        <button class="btn btn-outline-secondary button__search" onclick="search()" type="button"
+                            id="button-addon2">
                         </button>
                     </div>
                 </div>
@@ -127,7 +126,7 @@
                                 class="icon icon__melody"></object>
                         </div>
                         <div class="post__wrapper d-flex author">
-                            <img src="./img/blog/Sarah.png" alt="neil" class="post__userpic author__userpic">
+                            <img src="./img/blog/Sarah.png" alt="sarah" class="post__userpic author__userpic">
                             <div class="post__wrapper">
                                 <h4 class="post__username author__username head4">Sarah Healy</h4>
                                 <div class="post__data data">
@@ -172,7 +171,7 @@
                                 class="icon icon__picture"></object>
                         </div>
                         <div class="post__wrapper d-flex author">
-                            <img src="./img/blog/Grace.png" alt="neil" class="post__userpic author__userpic">
+                            <img src="./img/blog/Grace.png" alt="grace" class="post__userpic author__userpic">
                             <div class="post__wrapper">
                                 <h4 class="post__username author__username head4">Grace Noh</h4>
                                 <div class="post__data data">
@@ -215,11 +214,11 @@
                             class="icon icon__text"></object>
                     </div>
                     <div class="post__wrapper d-flex author">
-                        <img src="./img/blog/Alex.png" alt="neil" class="post__userpic author__userpic">
+                        <img src="./img/blog/Alex.png" alt="alex" class="post__userpic author__userpic">
                         <div class="post__wrapper">
                             <h4 class="post__username author__username head4">Alex Zlatkus</h4>
                             <div class="post__data data">
-                                <span class="post__data data">11 aug, 2019</span>
+                                <span class="post__data data">11 Aug, 2019</span>
                                 <span class="post__data data data-read">17 min read</span>
                                 <span class="post__data data data-comment"><a href="#">77</a></span>
                                 <div class="post__rate author__rate">
@@ -277,6 +276,61 @@
         </div>
     </footer>
 
+    <script>
+        const userPicsList = document.getElementsByClassName('author__userpic');
+
+        function search() {
+            const criterion = event.target.parentNode.previousElementSibling.value;
+            let result;
+            let count = 0;
+            let wrapper = document.querySelector('[data-result]');
+            if (wrapper) {
+                wrapper.remove();
+            }
+            Array.from(userPicsList).forEach(user => {
+                if (!result) {
+                    result = document.createElement('div');
+                    result.setAttribute('data-result', '');
+                }
+                const currentUser = user.cloneNode();
+                currentUser.className = 'pic';
+                let text = user.nextElementSibling.firstElementChild.innerText;
+                if (text.includes(criterion, 0)) {
+                    count++;
+                    let searchingUser = document.createElement('div');
+                    searchingUser.className = 'search-pic';
+                    let name = document.createElement('span');
+                    name.innerText = user.nextElementSibling.firstElementChild.innerText;
+                    searchingUser.append(currentUser, name);
+
+                    result.append(searchingUser)
+                }
+            });
+            if (count === 0) {
+                result.innerText = 'Not founded';
+            }
+
+            document.getElementById('search').append(result)
+
+
+
+            // document.getElementById('main').addEventListener('click', deletMenu);
+
+        }
+
+        const main = document.getElementById('main');
+        console.log(main)
+        main.addEventListener('click', () => {
+            console.log(event.target)
+            const button = Array.from(document.getElementsByClassName('button__search'))[0];
+            if (event.target !== button) {
+                const result = document.querySelector('[data-result]');
+                if (result) {
+                    result.remove();
+                }
+            }
+        }) 
+    </script>
 </body>
 
 </html>

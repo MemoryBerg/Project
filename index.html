@@ -16,7 +16,7 @@
             </a>
             <nav class="header__nav">
                 <ul class="header__list">
-                    <li class="header__item">
+                    <li class="header__item" id="home">
                         <a href="./index.html">
                             Home
                         </a>
@@ -63,7 +63,7 @@
             </div>
         </section>
         <div class="top">
-            <a href="#header" class="top__link">Home</a>
+            <a href="#header" class="top__link" onclick="active()">Home</a>
         </div>
         <section class="about" id="about">
             <div class="about__wrapper">
@@ -268,11 +268,13 @@
                                     Email
                                     <input type="email" name="email" class="form-control form__input input">
                                 </label>
-                                <label class="form__label input input__pass input__pass-show">
+                                <label class="form__label input input__pass input__pass-show" onclick="showPass()">
+                                    <span class="input__icon">show</span>
                                     Password
-                                    <input type="password" name="pass"
-                                        class="form-control form__input input input__pass input__pass-show">
                                 </label>
+                                <input type="password" name="pass" id="pass"
+                                    class="form-control form__input input input__pass input__pass-show">
+
                                 <button class="btn button button__dark front__button form__button">Send
                                     message</button>
                                 <p class="form__paragraph form__paragraph-bot paragraph">If you need to have a DNA
@@ -338,6 +340,26 @@
             <p class="footer__paragraph paragraph paragraph-small">©2019 All Rights Reserved.</p>
         </div>
     </footer>
+
+    <script>
+        function showPass() {
+            let input = event.target.parentNode.nextElementSibling;
+            console.log(input)
+            input.previousElementSibling.firstElementChild.classList.toggle('show');
+            console.log(input.previousElementSibling.firstElementChild.innerText)
+            if (input.getAttribute('type') === 'text') {
+                input.setAttribute('type', 'password');
+                input.previousElementSibling.firstElementChild.innerText = 'show';
+            } else {
+                input.setAttribute('type', 'text');
+                input.previousElementSibling.firstElementChild.innerText = 'Hide';
+            }
+        }
+
+        function active() {
+            document.getElementById('home').classList = 'header__item active';
+        }
+    </script>
 </body>
 
 </html>
